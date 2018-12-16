@@ -1,5 +1,5 @@
 # PiDP-11 software, alpha version
-See obsolescence.wix.com/obsolescence/pidp11
+See also: http://obsolescence.wixsite.com/obsolescence/pidp-11
 
 **Important: I'm struggling with github's handling of large (largish) binary images.
 So, do everything as per below. Then, download the contents of the bootscripts directory (OS disk images and boot scripts) from this Google Drive file:
@@ -8,16 +8,16 @@ https://drive.google.com/open?id=1SuBurN3uk6VqRGAmvjwREUWHuFMQLZPM
 
 
 **Note**
-- expect updates of the pidp-11 software in the coming months
-- you do not need to have the PiDP-11 hardware, it'll run fine without. Just no lights and switches.
+- Expect updates of the pidp-11 software in the coming months.
+- You do not need to have the PiDP-11 hardware, it'll run fine without. Just no lights and switches.
 
 
 **Install instructions:**
-- make sure your Pi is connected to the internet during install, pull the pidp11 repository,
-- create a 'pidp11' directory into /opt, and copy the files inside the pidp11 clone directory into /opt/pidp11/,
-- run sudo ./install.sh in /opt/pidp11/install/,
-- reboot
-- copy the contents of the above ZIP file into the bootscripts directory. It's easiest to download the file onto a USB stick from your laptop, then copy from the USB stick into the Pi.
+- Make sure your Pi is connected to the internet during install, pull the pidp11 repository.
+- Create a `pidp11` directory in `/opt`, then copy the files inside the `pidp11` clone directory into `/opt/pidp11/`
+- Run `sudo ./install.sh in /opt/pidp11/install/`
+- Reboot
+- Copy the contents of the above ZIP file into the bootscripts directory. It's easiest to download the file onto a USB stick from your laptop, then copy from the USB stick into the Pi.
 
 After reboot, you should find yourself booting RSX-11M+. See detailed instructions at the end of this file.
 
@@ -73,15 +73,21 @@ in a subdirectory in case you mess up a disk image and want to start afresh.
 
 In case you're not too familiar with Raspbian/Linux:
 First make sure you've got a working internet connection (googling will help you quickly). Then:
-* cd ~
-* git clone git://github.com/PiDP/pidp11.git    // not git clone https://github.com/PiDP/PiDP-11
-* sudo mkdir /opt/pidp11
-* cd ~/pidp11                                    // note - this is the downloaded copy in your home directory...
-* sudo cp -r * /opt/pidp11/                      // copy to the /opt/pidp11 directory
-* cd /opt/pidp11/install
-* sudo ./install.sh
-* <See comments at the top of this page. Download the bootscript/disk image collection and place it all in /opt/pidp11/bootscripts>
-* sudo reboot
+* `cd ~`
+* `git clone git://github.com/PiDP/pidp11.git`
+
+   _Not_ git clone https://github.com/PiDP/PiDP-11
+* `sudo mkdir /opt/pidp11`
+* `cd ~/pidp11`
+
+  Note: This is the downloaded copy in your home directory...
+* `sudo cp -r * /opt/pidp11/`
+  Copy to the /opt/pidp11 directory
+* `cd /opt/pidp11/install`
+* `sudo ./install.sh`
+
+ (See comments at the top of this page. Download the bootscript/disk image collection and place it all in `/opt/pidp11/bootscripts`)
+* `sudo reboot`
 
 
 **Various notes**
